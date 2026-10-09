@@ -14,7 +14,7 @@ A lightweight Python CLI tool that statically analyzes AWS IAM JSON policies for
 ## Installation
 
 ```bash
-git clone [https://github.com/abrarkhan12618-cell/aws-iam-policy-auditor.git](https://github.com/abrarkhan12618-cell/aws-iam-policy-auditor.git)
+git clone https://github.com/abrarkhan12618-cell/aws-iam-policy-auditor.git
 cd aws-iam-policy-auditor
 python3 -m venv venv
 source venv/bin/activate
