@@ -1,0 +1,12 @@
+{
+    "target_policy": "test_policy.json",
+    "total_findings": 1,
+    "findings": [
+        {
+            "id": "IAM-001",
+            "severity": "CRITICAL",
+            "vector": "Full Administrative Wildcard Access",
+            "description": "Statement index 0: Unrestricted actions (*) across all resources (*)."
+        }
+    ]
+}
