@@ -19,3 +19,35 @@ cd aws-iam-policy-auditor
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+
+## Usage
+
+```bash
+python3 run_audit.py -f path/to/policy.json
+```
+
+## Example Output
+
+```text
+$ python3 run_audit.py -f test_policy.json
+[*] Auditing IAM policy: test_policy.json
+
+[+] Audit Complete! Found 1 issues.
+  [CRITICAL] Full Administrative Wildcard Access (IAM-001)
+      -> Statement index 0: Unrestricted actions (*) across all resources (*).
+
+[+] Report saved to audit_report.json
+```
+
+## Limitations
+
+This tool does **not** currently analyze:
+
+- `NotAction` and `Condition` blocks
+- Service Control Policies (SCPs) and permission boundaries
+- Trust policies and resource-based policies
+- Live AWS accounts (static files only, no AWS API calls)
+
+## License
+
+MIT. See the [LICENSE](LICENSE) file.
